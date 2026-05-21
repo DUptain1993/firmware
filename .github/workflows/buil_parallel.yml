@@ -4,7 +4,9 @@ name: Build and Push Releases
 on:
   push:
     branches:
-      - main, workflow
+      - main
+      - workflow
+      - dev
     tags:
       - "*"
   workflow_dispatch:

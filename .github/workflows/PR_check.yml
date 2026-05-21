@@ -4,7 +4,8 @@ name: Build and Push OR check-PR
 on:
   pull_request:
     branches:
-      - main, dev
+      - main
+      - dev
   workflow_dispatch:
     inputs:
       board:
