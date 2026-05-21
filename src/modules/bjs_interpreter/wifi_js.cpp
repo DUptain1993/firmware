@@ -8,6 +8,7 @@
 #include <ArduinoJson.h>
 #include <HTTPClient.h>
 #include <WiFi.h>
+#include <esp_wifi.h>
 
 static const char *wifi_enc_types[] = {
     "OPEN",
