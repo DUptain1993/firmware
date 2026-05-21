@@ -267,7 +267,6 @@ uint32_t ymodemReceiveCallback(cmd *c) {
     uint32_t expectedFileSize = 0;
     bool firstBlock = true;
     bool headerReceived = false;
-
     // Clear any existing data in serial buffer and feed watchdog
     while (serialDevice->available()) {
         serialDevice->read();
@@ -559,7 +558,6 @@ uint32_t ymodemReceiveCallback(cmd *c) {
             writeByte(ACK);
             serialDevice->flush();
             firstBlock = false;
-            headerReceived = true;
             expectedBlockNum = 1; // Next block should be 1
             continue;
         }

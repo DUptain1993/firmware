@@ -4,7 +4,9 @@
 #include "core/utils.h"
 #include <globals.h>
 #ifdef HAS_RGB_LED
+#ifndef FASTLED_RMT_BUILTIN_DRIVER
 #define FASTLED_RMT_BUILTIN_DRIVER 1  // Use the ESP32 RMT built-in driver
+#endif
 #define FASTLED_RMT_MAX_CHANNELS 1    // Maximum number of RMT channels
 #define FASTLED_ESP32_RMT_CHANNEL_0 0 // Use RMT channel 0 for FastLED
 #include <FastLED.h>
