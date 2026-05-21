@@ -558,7 +558,6 @@ uint32_t ymodemReceiveCallback(cmd *c) {
             writeByte(ACK);
             serialDevice->flush();
             firstBlock = false;
-            headerReceived = true;
             expectedBlockNum = 1; // Next block should be 1
             continue;
         }
