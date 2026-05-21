@@ -178,7 +178,6 @@ void BleKeyboard::begin(const uint8_t *layout, uint16_t showAs) {
     BLEDevice::setSecurityAuth(true, true, true);
 
     hid->setReportMap((uint8_t *)_hidReportDescriptor, sizeof(_hidReportDescriptor));
-    hid->startServices();
     advertising = pServer->getAdvertising();
     advertising->setAppearance(appearance);
     if (_randUUID) {

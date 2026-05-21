@@ -41,6 +41,16 @@ conflicts = [
         r'#include <NimBLEDevice.h>',
         '#include <Arduino.h>\n#include <NimBLEDevice.h>'
     ),
+    (
+        ".pio/libdeps/*/PNGdec/src/PNGdec.h",
+        r'#define INTELSHORT',
+        '#undef INTELSHORT\n#define INTELSHORT'
+    ),
+    (
+        ".pio/libdeps/*/PNGdec/src/PNGdec.h",
+        r'#define INTELLONG',
+        '#undef INTELLONG\n#define INTELLONG'
+    ),
 ]
 
 for file_pattern, search, replace in conflicts:
